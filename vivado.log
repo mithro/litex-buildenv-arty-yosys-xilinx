@@ -1,0 +1,263 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Thu Oct  4 16:41:29 2018
+# Process ID: 86532
+# Current directory: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware
+# Command line: vivado -mode batch -source top.tcl
+# Log file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/vivado.log
+# Journal file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/vivado.jou
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7a35t-csg324-1
+# read_xdc top.xdc
+# read_edif top.edif
+# link_design -top top -part xc7a35t-csg324-1
+Command: link_design -top top -part xc7a35t-csg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Parsing EDIF File [./top.edif]
+Finished Parsing EDIF File [./top.edif]
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : IDELAYE2 has additional ports (REGRST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : ISERDESE2 has additional ports (SHIFTIN2) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : OSERDESE2 has additional ports (TBYTEIN) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : PLLE2_BASE has additional ports (RST) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : XADC has additional ports (MUXADDR[0]) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAMB36E1 has additional ports (INJECTSBITERR) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAM64X1D has additional ports (SPO) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAM64X1D has additional ports (SPO) not seen in its original version.
+WARNING: [Netlist 29-5] Replacement cell view : RAM64X1D has additional ports (SPO) not seen in its original version.
+INFO: [Common 17-14] Message 'Netlist 29-5' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Netlist 29-17] Analyzing 2669 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc]
+WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:282]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:284]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:284]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:286]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:286]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:286]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:286]
+Finished Parsing XDC File [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc]
+INFO: [Opt 31-140] Inserted 12 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 36 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 34 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 524 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 240 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFTDS, OBUFTDS): 2 instances
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 264 instances
+
+9 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1439.758 ; gain = 278.262 ; free physical = 1130 ; free virtual = 32756
+# report_timing_summary -file top_timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 2003.246 ; gain = 563.488 ; free physical = 738 ; free virtual = 32364
+# report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
+report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2003.246 ; gain = 0.000 ; free physical = 737 ; free virtual = 32363
+# report_utilization -file top_utilization_synth.rpt
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2004.246 ; gain = 1.000 ; free physical = 738 ; free virtual = 32364
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2076.277 ; gain = 72.031 ; free physical = 736 ; free virtual = 32361
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 25 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 2474738da
+
+Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.63 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 750 ; free virtual = 32376
+INFO: [Opt 31-389] Phase Retarget created 317 cells and removed 380 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 76 load pin(s).
+Phase 2 Constant propagation | Checksum: 1a839857d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.85 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 752 ; free virtual = 32378
+INFO: [Opt 31-389] Phase Constant propagation created 36 cells and removed 332 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 18f77b323
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 751 ; free virtual = 32378
+INFO: [Opt 31-389] Phase Sweep created 4 cells and removed 39 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 18f77b323
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 751 ; free virtual = 32377
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 18f77b323
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 751 ; free virtual = 32377
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 751 ; free virtual = 32377
+Ending Logic Optimization Task | Checksum: 18f77b323
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2076.277 ; gain = 0.000 ; free physical = 751 ; free virtual = 32377
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.681 | TNS=-3.521 |
+INFO: [Power 33-23] Power model is not available for DNA_PORT
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 37 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 34 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 67 Total Ports: 74
+Ending PowerOpt Patch Enables Task | Checksum: 19c70a39a
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2492.699 ; gain = 0.000 ; free physical = 687 ; free virtual = 32320
+Ending Power Optimization Task | Checksum: 19c70a39a
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 2492.699 ; gain = 416.422 ; free physical = 698 ; free virtual = 32331
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2492.699 ; gain = 488.453 ; free physical = 698 ; free virtual = 32331
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC PLIDC-10] IDELAYCTRL missing for IODELAYs: There are 16 IDELAY/ODELAY/IODELAY cells in the design which requires IDelayCtrl, but there is no IDelayCtrl cell
+INFO: [Vivado_Tcl 4-198] DRC finished with 1 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+    while executing
+"place_design"
+    (file "top.tcl" line 9)
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  4 16:42:30 2018...
