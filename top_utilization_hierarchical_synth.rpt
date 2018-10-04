@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Thu Oct  4 16:42:22 2018
+| Date         : Thu Oct  4 16:53:01 2018
 | Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
 | Design       : top
@@ -33,15 +33,15 @@ Table of Contents
 |       (instruction_unit)                         | $paramod$8a1e6bce2f424a181d9e9e47548b3209ceb88e2d\lm32_instruction_unit |        417 |        417 |       0 |    0 |  283 |      0 |      0 |            0 |
 |       icache                                     |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_icache |        206 |        206 |       0 |    0 |  119 |      1 |      1 |            0 |
 |         (icache)                                 |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_icache |        103 |        103 |       0 |    0 |   46 |      0 |      0 |            0 |
-|         memories[0].way_0_data_ram               |                        $paramod\lm32_ram\data_width=32\address_width=10 |         56 |         56 |       0 |    0 |   43 |      1 |      0 |            0 |
-|         memories[0].way_0_tag_ram                |                         $paramod\lm32_ram\data_width=21\address_width=8 |         47 |         47 |       0 |    0 |   30 |      0 |      1 |            0 |
+|         memories[0].way_0_data_ram               |                    $paramod\lm32_ram\data_width=32\address_width=10_HD1 |         56 |         56 |       0 |    0 |   43 |      1 |      0 |            0 |
+|         memories[0].way_0_tag_ram                |                     $paramod\lm32_ram\data_width=21\address_width=8_HD2 |         47 |         47 |       0 |    0 |   30 |      0 |      1 |            0 |
 |     interrupt_unit                               |                                                          lm32_interrupt |         95 |         95 |       0 |    0 |   34 |      0 |      0 |            0 |
 |     load_store_unit                              |  $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_load_store_unit |        548 |        548 |       0 |    0 |  306 |      1 |      1 |            0 |
 |       (load_store_unit)                          |  $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_load_store_unit |        325 |        325 |       0 |    0 |  185 |      0 |      0 |            0 |
 |       dcache                                     |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_dcache |        223 |        223 |       0 |    0 |  121 |      1 |      1 |            0 |
 |         (dcache)                                 |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_dcache |        120 |        120 |       0 |    0 |   48 |      0 |      0 |            0 |
-|         memories[0].data_memories.way_0_data_ram |                    $paramod\lm32_ram\data_width=32\address_width=10_HD1 |         56 |         56 |       0 |    0 |   43 |      1 |      0 |            0 |
-|         memories[0].way_0_tag_ram                |                     $paramod\lm32_ram\data_width=21\address_width=8_HD2 |         47 |         47 |       0 |    0 |   30 |      0 |      1 |            0 |
+|         memories[0].data_memories.way_0_data_ram |                        $paramod\lm32_ram\data_width=32\address_width=10 |         56 |         56 |       0 |    0 |   43 |      1 |      0 |            0 |
+|         memories[0].way_0_tag_ram                |                         $paramod\lm32_ram\data_width=21\address_width=8 |         47 |         47 |       0 |    0 |   30 |      0 |      1 |            0 |
 |     logic_op                                     |                                                           lm32_logic_op |         32 |         32 |       0 |    0 |    0 |      0 |      0 |            0 |
 |     mc_arithmetic                                |                                                      lm32_mc_arithmetic |        195 |        195 |       0 |    0 |  138 |      0 |      0 |            0 |
 |     multiplier                                   |                                                         lm32_multiplier |       1308 |       1308 |       0 |    0 |  128 |      0 |      0 |            0 |

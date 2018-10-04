@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3 (lin64) Build 2018833 Wed Oct  4 19:58:07 MDT 2017
-| Date         : Thu Oct  4 16:42:22 2018
+| Date         : Thu Oct  4 16:53:01 2018
 | Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     -0.837       -6.833                     30                10391       -0.172       -7.736                     45                10391        0.345        0.000                       0                  4268  
+     -0.837       -6.845                     30                10391       -0.172       -7.736                     45                10391        0.345        0.000                       0                  4268  
 
 
 Timing constraints are not met.
@@ -161,7 +161,7 @@ clk100                                                                          
   pll_sys                                                                                                                                                          7.845        0.000                       0                     2  
   pll_sys4x                                                                                                                                                        0.345        0.000                       0                    77  
   pll_sys4x_dqs                                                                                                                                                    0.345        0.000                       0                     4  
-sys_clk               -0.837       -6.833                     30                10391       -0.172       -7.736                     45                10391        3.750        0.000                       0                  4180  
+sys_clk               -0.837       -6.845                     30                10391       -0.172       -7.736                     45                10391        3.750        0.000                       0                  4180  
 
 
 ------------------------------------------------------------------------------------------------
@@ -331,7 +331,7 @@ Max Period  n/a     PLLE2_ADV/CLKOUT2  n/a            160.000       2.500       
 From Clock:  sys_clk
   To Clock:  sys_clk
 
-Setup :           30  Failing Endpoints,  Worst Slack       -0.837ns,  Total Violation       -6.833ns
+Setup :           30  Failing Endpoints,  Worst Slack       -0.837ns,  Total Violation       -6.845ns
 Hold  :           45  Failing Endpoints,  Worst Slack       -0.172ns,  Total Violation       -7.736ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -383,9 +383,9 @@ Slack (VIOLATED) :        -0.837ns  (required time - arrival time)
                          net (fo=2, unplaced)         0.460     7.053    lm32_cpu/$abc$60068$n1519
                          LUT3 (Prop_lut3_I2_O)        0.124     7.177 f  lm32_cpu/$abc$60068$auto$blifparse.cc:492:parse_blif$60108/O
                          net (fo=61, unplaced)        0.561     7.738    lm32_cpu/instruction_unit/branch_taken_m
-                         MUXF7 (Prop_muxf7_S_O)       0.296     8.034 r  lm32_cpu/instruction_unit/$abc$59133$auto$blifparse.cc:492:parse_blif$59421.fpga_mux_0/O
-                         net (fo=2, unplaced)         0.433     8.467    lm32_cpu/instruction_unit/$abc$59133$n1001
-                         LUT4 (Prop_lut4_I0_O)        0.298     8.765 r  lm32_cpu/instruction_unit/$abc$59133$auto$blifparse.cc:492:parse_blif$59419/O
+                         MUXF7 (Prop_muxf7_S_O)       0.296     8.034 r  lm32_cpu/instruction_unit/$abc$59133$auto$blifparse.cc:492:parse_blif$59417.fpga_mux_0/O
+                         net (fo=2, unplaced)         0.433     8.467    lm32_cpu/instruction_unit/$abc$59133$n997
+                         LUT4 (Prop_lut4_I0_O)        0.298     8.765 r  lm32_cpu/instruction_unit/$abc$59133$auto$blifparse.cc:492:parse_blif$59415/O
                          net (fo=4, unplaced)         0.443     9.208    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/read_address[5]
                          LUT3 (Prop_lut3_I1_O)        0.124     9.332 r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$abc$61053$auto$blifparse.cc:492:parse_blif$61092/O
                          net (fo=3, unplaced)         0.920    10.252    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$0ra[9:0][5]
