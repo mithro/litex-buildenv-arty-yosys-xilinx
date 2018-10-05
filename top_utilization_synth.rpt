@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Oct  4 18:32:17 2018
+| Date         : Thu Oct  4 18:40:59 2018
 | Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
 | Command      : report_utilization -file top_utilization_synth.rpt
 | Design       : top
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 8966 |     0 |     20800 | 43.11 |
-|   LUT as Logic             | 8438 |     0 |     20800 | 40.57 |
-|   LUT as Memory            |  528 |     0 |      9600 |  5.50 |
-|     LUT as Distributed RAM |  528 |     0 |           |       |
+| Slice LUTs*                | 5741 |     0 |     20800 | 27.60 |
+|   LUT as Logic             | 5565 |     0 |     20800 | 26.75 |
+|   LUT as Memory            |  176 |     0 |      9600 |  1.83 |
+|     LUT as Distributed RAM |  176 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 3524 |     0 |     41600 |  8.47 |
-|   Register as Flip Flop    | 3524 |     0 |     41600 |  8.47 |
+| Slice Registers            | 2149 |     0 |     41600 |  5.17 |
+|   Register as Flip Flop    | 2149 |     0 |     41600 |  5.17 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                   |  574 |     0 |     16300 |  3.52 |
-| F8 Muxes                   |  159 |     0 |      8150 |  1.95 |
+| F7 Muxes                   |  581 |     0 |     16300 |  3.56 |
+| F8 Muxes                   |  135 |     0 |      8150 |  1.66 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -59,7 +59,7 @@ Table of Contents
 | 2     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 3522  |          Yes |       Reset |            - |
+| 2147  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -69,11 +69,11 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    | 27.5 |     0 |        50 | 55.00 |
+| Block RAM Tile    |   19 |     0 |        50 | 38.00 |
 |   RAMB36/FIFO*    |   18 |     0 |        50 | 36.00 |
 |     RAMB36E1 only |   18 |       |           |       |
-|   RAMB18          |   19 |     0 |       100 | 19.00 |
-|     RAMB18E1 only |   19 |       |           |       |
+|   RAMB18          |    2 |     0 |       100 |  2.00 |
+|     RAMB18E1 only |    2 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
@@ -94,9 +94,9 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   70 |    70 |       210 | 33.33 |
-|   IOB Master Pads           |   35 |       |           |       |
-|   IOB Slave Pads            |   32 |       |           |       |
+| Bonded IOB                  |   16 |    16 |       210 |  7.62 |
+|   IOB Master Pads           |    7 |       |           |       |
+|   IOB Slave Pads            |    8 |       |           |       |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         5 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         5 |  0.00 |
@@ -106,12 +106,9 @@ Table of Contents
 | IBUFDS                      |    0 |     0 |       202 |  0.00 |
 | PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |  0.00 |
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |  0.00 |
-| IDELAYE2/IDELAYE2_FINEDELAY |   16 |    16 |       250 |  6.40 |
-|   IDELAYE2 only             |   16 |    16 |           |       |
-| ILOGIC                      |   16 |    16 |       210 |  7.62 |
-|   ISERDES                   |   16 |    16 |           |       |
-| OLOGIC                      |   45 |    45 |       210 | 21.43 |
-|   OSERDES                   |   45 |    45 |           |       |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       250 |  0.00 |
+| ILOGIC                      |    0 |     0 |       210 |  0.00 |
+| OLOGIC                      |    0 |     0 |       210 |  0.00 |
 +-----------------------------+------+-------+-----------+-------+
 
 
@@ -121,13 +118,13 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    4 |     0 |        32 | 12.50 |
+| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         5 |  0.00 |
 | PLLE2_ADV  |    1 |     0 |         5 | 20.00 |
 | BUFMRCE    |    0 |     0 |        10 |  0.00 |
 | BUFHCE     |    0 |     0 |        72 |  0.00 |
-| BUFR       |    1 |     0 |        20 |  5.00 |
+| BUFR       |    0 |     0 |        20 |  0.00 |
 +------------+------+-------+-----------+-------+
 
 
@@ -155,34 +152,26 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 3522 |        Flop & Latch |
-| LUT2      | 2962 |                 LUT |
-| LUT6      | 2853 |                 LUT |
-| LUT3      | 1060 |                 LUT |
-| LUT4      |  909 |                 LUT |
-| MUXF7     |  574 |               MuxFx |
-| LUT5      |  542 |                 LUT |
-| RAMD64E   |  528 |  Distributed Memory |
-| LUT1      |  318 |                 LUT |
-| CARRY4    |  240 |          CarryLogic |
-| MUXF8     |  159 |               MuxFx |
-| OSERDESE2 |   45 |                  IO |
-| OBUF      |   36 |                  IO |
-| IBUF      |   28 |                  IO |
-| RAMB18E1  |   19 |        Block Memory |
+| LUT6      | 2211 |                 LUT |
+| FDRE      | 2147 |        Flop & Latch |
+| LUT2      | 1791 |                 LUT |
+| LUT3      |  615 |                 LUT |
+| MUXF7     |  581 |               MuxFx |
+| LUT4      |  525 |                 LUT |
+| LUT5      |  418 |                 LUT |
+| LUT1      |  210 |                 LUT |
+| RAMD64E   |  176 |  Distributed Memory |
+| CARRY4    |  160 |          CarryLogic |
+| MUXF8     |  135 |               MuxFx |
 | RAMB36E1  |   18 |        Block Memory |
-| OBUFT     |   16 |                  IO |
-| ISERDESE2 |   16 |                  IO |
-| IDELAYE2  |   16 |                  IO |
-| OBUFTDS   |    4 |                  IO |
-| BUFG      |    4 |               Clock |
-| INV       |    3 |                 LUT |
-| OBUFDS    |    2 |                  IO |
+| IBUF      |   11 |                  IO |
+| OBUF      |    5 |                  IO |
+| RAMB18E1  |    2 |        Block Memory |
 | FDPE      |    2 |        Flop & Latch |
 | XADC      |    1 |              Others |
 | PLLE2_ADV |    1 |               Clock |
 | DNA_PORT  |    1 |              Others |
-| BUFR      |    1 |               Clock |
+| BUFG      |    1 |               Clock |
 +-----------+------+---------------------+
 
 

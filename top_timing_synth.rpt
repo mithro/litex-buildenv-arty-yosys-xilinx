@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Oct  4 18:32:16 2018
+| Date         : Thu Oct  4 18:40:58 2018
 | Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
 | Command      : report_timing_summary -file top_timing_synth.rpt
 | Design       : top
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There is 1 register/latch pin with no clock driven by root clock pin: $auto$simplemap.cc:442:simplemap_dffe$41222/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: $auto$simplemap.cc:442:simplemap_dffe$21418/Q (HIGH)
 
 
 2. checking constant_clock
@@ -74,14 +74,14 @@ Table of Contents
 
 5. checking no_input_delay
 --------------------------
- There are 27 input ports with no input delay specified. (HIGH)
+ There are 10 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 52 ports with no output delay specified. (HIGH)
+ There are 5 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     -0.837       -6.845                     30                10391       -0.172       -7.736                     45                10391        0.345        0.000                       0                  4268  
+     -0.511       -2.364                      9                 5308        0.072        0.000                      0                 5308        3.000        0.000                       0                  2347  
 
 
 Timing constraints are not met.
@@ -137,15 +137,12 @@ Timing constraints are not met.
 | -------------
 ------------------------------------------------------------------------------------------------
 
-Clock            Waveform(ns)         Period(ns)      Frequency(MHz)
------            ------------         ----------      --------------
-clk100           {0.000 5.000}        10.000          100.000         
-  eth_clk        {0.000 20.000}       40.000          25.000          
-  pll_fb         {0.000 5.000}        10.000          100.000         
-  pll_sys        {0.000 5.000}        10.000          100.000         
-  pll_sys4x      {0.000 1.250}        2.500           400.000         
-  pll_sys4x_dqs  {0.625 1.875}        2.500           400.000         
-sys_clk          {0.000 5.000}        10.000          100.000         
+Clock      Waveform(ns)       Period(ns)      Frequency(MHz)
+-----      ------------       ----------      --------------
+clk100     {0.000 5.000}      10.000          100.000         
+  pll_fb   {0.000 5.000}      10.000          100.000         
+  pll_sys  {0.000 5.000}      10.000          100.000         
+sys_clk    {0.000 5.000}      10.000          100.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -153,15 +150,12 @@ sys_clk          {0.000 5.000}        10.000          100.000
 | -----------------
 ------------------------------------------------------------------------------------------------
 
-Clock                WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
------                -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk100                                                                                                                                                             3.000        0.000                       0                     2  
-  eth_clk                                                                                                                                                         37.845        0.000                       0                     1  
-  pll_fb                                                                                                                                                           8.751        0.000                       0                     2  
-  pll_sys                                                                                                                                                          7.845        0.000                       0                     2  
-  pll_sys4x                                                                                                                                                        0.345        0.000                       0                    77  
-  pll_sys4x_dqs                                                                                                                                                    0.345        0.000                       0                     4  
-sys_clk               -0.837       -6.845                     30                10391       -0.172       -7.736                     45                10391        3.750        0.000                       0                  4180  
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk100                                                                                                                                                          3.000        0.000                       0                     1  
+  pll_fb                                                                                                                                                        8.751        0.000                       0                     2  
+  pll_sys                                                                                                                                                       7.845        0.000                       0                     2  
+sys_clk            -0.511       -2.364                      9                 5308        0.072        0.000                      0                 5308        3.750        0.000                       0                  2342  
 
 
 ------------------------------------------------------------------------------------------------
@@ -206,32 +200,10 @@ Period(ns):         10.000
 Sources:            { clk100 }
 
 Check Type        Corner  Lib Pin           Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     BUFR/I            n/a            1.666         10.000      8.334                BUFR/I
+Min Period        n/a     PLLE2_ADV/CLKIN1  n/a            1.249         10.000      8.751                PLLE2_BASE/CLKIN1
 Max Period        n/a     PLLE2_ADV/CLKIN1  n/a            52.633        10.000      42.633               PLLE2_BASE/CLKIN1
 Low Pulse Width   Slow    PLLE2_ADV/CLKIN1  n/a            2.000         5.000       3.000                PLLE2_BASE/CLKIN1
 High Pulse Width  Slow    PLLE2_ADV/CLKIN1  n/a            2.000         5.000       3.000                PLLE2_BASE/CLKIN1
-
-
-
----------------------------------------------------------------------------------------------------
-From Clock:  eth_clk
-  To Clock:  eth_clk
-
-Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-PW    :            0  Failing Endpoints,  Worst Slack       37.845ns,  Total Violation        0.000ns
----------------------------------------------------------------------------------------------------
-
-
-Pulse Width Checks
---------------------------------------------------------------------------------------
-Clock Name:         eth_clk
-Waveform(ns):       { 0.000 20.000 }
-Period(ns):         40.000
-Sources:            { BUFR/O }
-
-Check Type  Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period  n/a     BUFG/I   n/a            2.155         40.000      37.845               BUFG_6/I
 
 
 
@@ -282,76 +254,30 @@ Max Period  n/a     PLLE2_ADV/CLKOUT0  n/a            160.000       10.000      
 
 
 ---------------------------------------------------------------------------------------------------
-From Clock:  pll_sys4x
-  To Clock:  pll_sys4x
-
-Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-PW    :            0  Failing Endpoints,  Worst Slack        0.345ns,  Total Violation        0.000ns
----------------------------------------------------------------------------------------------------
-
-
-Pulse Width Checks
---------------------------------------------------------------------------------------
-Clock Name:         pll_sys4x
-Waveform(ns):       { 0.000 1.250 }
-Period(ns):         2.500
-Sources:            { PLLE2_BASE/CLKOUT1 }
-
-Check Type  Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period  n/a     BUFG/I             n/a            2.155         2.500       0.345                BUFG_1/I
-Max Period  n/a     PLLE2_ADV/CLKOUT1  n/a            160.000       2.500       157.500              PLLE2_BASE/CLKOUT1
-
-
-
----------------------------------------------------------------------------------------------------
-From Clock:  pll_sys4x_dqs
-  To Clock:  pll_sys4x_dqs
-
-Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
-PW    :            0  Failing Endpoints,  Worst Slack        0.345ns,  Total Violation        0.000ns
----------------------------------------------------------------------------------------------------
-
-
-Pulse Width Checks
---------------------------------------------------------------------------------------
-Clock Name:         pll_sys4x_dqs
-Waveform(ns):       { 0.625 1.875 }
-Period(ns):         2.500
-Sources:            { PLLE2_BASE/CLKOUT2 }
-
-Check Type  Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period  n/a     BUFG/I             n/a            2.155         2.500       0.345                BUFG_2/I
-Max Period  n/a     PLLE2_ADV/CLKOUT2  n/a            160.000       2.500       157.500              PLLE2_BASE/CLKOUT2
-
-
-
----------------------------------------------------------------------------------------------------
 From Clock:  sys_clk
   To Clock:  sys_clk
 
-Setup :           30  Failing Endpoints,  Worst Slack       -0.837ns,  Total Violation       -6.845ns
-Hold  :           45  Failing Endpoints,  Worst Slack       -0.172ns,  Total Violation       -7.736ns
+Setup :            9  Failing Endpoints,  Worst Slack       -0.511ns,  Total Violation       -2.364ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.072ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -0.837ns  (required time - arrival time)
-  Source:                 $auto$simplemap.cc:420:simplemap_dff$43298/C
+Slack (VIOLATED) :        -0.511ns  (required time - arrival time)
+  Source:                 lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9339/C
                             (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$auto$simplemap.cc:420:simplemap_dff$59044/D
+  Destination:            lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9050/D
                             (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk rise@10.000ns - sys_clk rise@0.000ns)
-  Data Path Delay:        10.664ns  (logic 2.880ns (27.007%)  route 7.784ns (72.993%))
-  Logic Levels:           13  (LUT2=3 LUT3=2 LUT4=1 LUT6=5 MUXF7=2)
+  Data Path Delay:        10.338ns  (logic 3.337ns (32.279%)  route 7.001ns (67.721%))
+  Logic Levels:           12  (CARRY4=3 LUT2=2 LUT3=1 LUT5=1 LUT6=3 MUXF7=1 MUXF8=1)
   Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.655ns = ( 10.655 - 10.000 ) 
-    Source Clock Delay      (SCD):    0.800ns
+    Destination Clock Delay (DCD):    0.439ns = ( 10.439 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.584ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.057ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
@@ -362,52 +288,53 @@ Slack (VIOLATED) :        -0.837ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk rise edge)    0.000     0.000 r  
                          BUFG                         0.000     0.000 r  BUFG/O
-                         net (fo=4180, unplaced)      0.800     0.800    sys_clk
-                         FDRE                                         r  $auto$simplemap.cc:420:simplemap_dff$43298/C
+                         net (fo=2342, unplaced)      0.584     0.584    lm32_cpu/multiplier/clk_i
+                         FDRE                                         r  lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9339/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.456     1.256 r  $auto$simplemap.cc:420:simplemap_dff$43298/Q
-                         net (fo=3, unplaced)         0.488     1.744    basesoc_timer0_zero_pending
-                         LUT2 (Prop_lut2_I0_O)        0.295     2.039 r  $abc$62868$auto$blifparse.cc:492:parse_blif$66641/O
-                         net (fo=2, unplaced)         1.122     3.161    lm32_cpu/interrupt_unit/interrupt[1]
-                         LUT6 (Prop_lut6_I1_O)        0.124     3.285 f  lm32_cpu/interrupt_unit/$abc$61351$auto$blifparse.cc:492:parse_blif$61441/O
-                         net (fo=2, unplaced)         0.913     4.198    lm32_cpu/interrupt_unit/$abc$61351$n267_1
-                         LUT6 (Prop_lut6_I4_O)        0.124     4.322 r  lm32_cpu/interrupt_unit/$abc$61351$auto$blifparse.cc:492:parse_blif$61423.fpga_lut_1/O
-                         net (fo=1, unplaced)         0.000     4.322    lm32_cpu/interrupt_unit/$abc$61351$auto$blifparse.cc:492:parse_blif$61423.T1
-                         MUXF7 (Prop_muxf7_I1_O)      0.245     4.567 r  lm32_cpu/interrupt_unit/$abc$61351$auto$blifparse.cc:492:parse_blif$61423.fpga_mux_0/O
-                         net (fo=4, unplaced)         0.476     5.043    lm32_cpu/interrupt_exception
-                         LUT6 (Prop_lut6_I1_O)        0.298     5.341 r  lm32_cpu/$abc$60068$auto$blifparse.cc:492:parse_blif$60071/O
-                         net (fo=17, unplaced)        0.505     5.846    lm32_cpu/$abc$60068$n1481_1
-                         LUT2 (Prop_lut2_I0_O)        0.124     5.970 r  lm32_cpu/$abc$60068$auto$blifparse.cc:492:parse_blif$60070/O
-                         net (fo=13, unplaced)        0.499     6.469    lm32_cpu/stall_m
-                         LUT2 (Prop_lut2_I0_O)        0.124     6.593 f  lm32_cpu/$abc$60068$auto$blifparse.cc:492:parse_blif$60109/O
-                         net (fo=2, unplaced)         0.460     7.053    lm32_cpu/$abc$60068$n1519
-                         LUT3 (Prop_lut3_I2_O)        0.124     7.177 f  lm32_cpu/$abc$60068$auto$blifparse.cc:492:parse_blif$60108/O
-                         net (fo=61, unplaced)        0.561     7.738    lm32_cpu/instruction_unit/branch_taken_m
-                         MUXF7 (Prop_muxf7_S_O)       0.296     8.034 r  lm32_cpu/instruction_unit/$abc$59133$auto$blifparse.cc:492:parse_blif$59417.fpga_mux_0/O
-                         net (fo=2, unplaced)         0.433     8.467    lm32_cpu/instruction_unit/$abc$59133$n997
-                         LUT4 (Prop_lut4_I0_O)        0.298     8.765 r  lm32_cpu/instruction_unit/$abc$59133$auto$blifparse.cc:492:parse_blif$59415/O
-                         net (fo=4, unplaced)         0.443     9.208    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/read_address[5]
-                         LUT3 (Prop_lut3_I1_O)        0.124     9.332 r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$abc$61053$auto$blifparse.cc:492:parse_blif$61092/O
-                         net (fo=3, unplaced)         0.920    10.252    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$0ra[9:0][5]
-                         LUT6 (Prop_lut6_I0_O)        0.124    10.376 r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$abc$61053$auto$blifparse.cc:492:parse_blif$61098/O
-                         net (fo=1, unplaced)         0.964    11.340    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$abc$61053$n188
-                         LUT6 (Prop_lut6_I0_O)        0.124    11.464 r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$abc$61053$auto$blifparse.cc:492:parse_blif$61097/O
-                         net (fo=1, unplaced)         0.000    11.464    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$abc$61053$n161
-                         FDRE                                         r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$auto$simplemap.cc:420:simplemap_dff$59044/D
+                         FDRE (Prop_fdre_C_Q)         0.456     1.040 f  lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9339/Q
+                         net (fo=93, unplaced)        1.063     2.103    lm32_cpu/multiplier/muliplicand[2]
+                         LUT6 (Prop_lut6_I0_O)        0.295     2.398 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35256/O
+                         net (fo=4, unplaced)         1.135     3.533    lm32_cpu/multiplier/$abc$34783$n859
+                         LUT6 (Prop_lut6_I1_O)        0.124     3.657 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35271/O
+                         net (fo=3, unplaced)         0.920     4.577    lm32_cpu/multiplier/$abc$34783$n874
+                         LUT3 (Prop_lut3_I1_O)        0.124     4.701 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35302/O
+                         net (fo=3, unplaced)         1.129     5.830    lm32_cpu/multiplier/$abc$34783$n905
+                         LUT5 (Prop_lut5_I0_O)        0.124     5.954 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35301/O
+                         net (fo=6, unplaced)         0.481     6.435    lm32_cpu/multiplier/$abc$34783$n904
+                         LUT2 (Prop_lut2_I1_O)        0.124     6.559 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35299/O
+                         net (fo=8, unplaced)         0.940     7.499    lm32_cpu/multiplier/$abc$34783$n902
+                         LUT6 (Prop_lut6_I5_O)        0.124     7.623 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35760.fpga_lut_1/O
+                         net (fo=1, unplaced)         0.000     7.623    lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35760.T1
+                         MUXF7 (Prop_muxf7_I1_O)      0.245     7.868 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35760.fpga_mux_0/O
+                         net (fo=1, unplaced)         0.000     7.868    lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35760.T4
+                         MUXF8 (Prop_muxf8_I0_O)      0.104     7.972 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$35760.fpga_mux_2/O
+                         net (fo=1, unplaced)         0.715     8.687    lm32_cpu/multiplier/$abc$34783$n3216
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.867     9.554 r  lm32_cpu/multiplier/$auto$maccmap.cc:240:synth$9205.slice[20].muxcy_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     9.554    lm32_cpu/multiplier/$auto$maccmap.cc:240:synth$9205.C[24]
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.668 r  lm32_cpu/multiplier/$auto$maccmap.cc:240:synth$9205.slice[24].muxcy_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     9.668    lm32_cpu/multiplier/$auto$maccmap.cc:240:synth$9205.C[28]
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.329     9.997 r  lm32_cpu/multiplier/$auto$maccmap.cc:240:synth$9205.slice[28].muxcy_CARRY4/O[3]
+                         net (fo=1, unplaced)         0.618    10.615    lm32_cpu/multiplier/$abc$34783$n68
+                         LUT2 (Prop_lut2_I1_O)        0.307    10.922 r  lm32_cpu/multiplier/$abc$34783$auto$blifparse.cc:492:parse_blif$34817/O
+                         net (fo=1, unplaced)         0.000    10.922    lm32_cpu/multiplier/$0product[31:0][31]
+                         FDRE                                         r  lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9050/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk rise edge)   10.000    10.000 r  
                          BUFG                         0.000    10.000 r  BUFG/O
-                         net (fo=4180, unplaced)      0.655    10.655    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/write_clk
-                         FDRE                                         r  lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$auto$simplemap.cc:420:simplemap_dff$59044/C
-                         clock pessimism              0.000    10.655    
-                         clock uncertainty           -0.057    10.598    
-                         FDRE (Setup_fdre_C_D)        0.029    10.627    lm32_cpu/instruction_unit/icache/memories[0].way_0_data_ram/$auto$simplemap.cc:420:simplemap_dff$59044
+                         net (fo=2342, unplaced)      0.439    10.439    lm32_cpu/multiplier/clk_i
+                         FDRE                                         r  lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9050/C
+                         clock pessimism              0.000    10.439    
+                         clock uncertainty           -0.057    10.382    
+                         FDRE (Setup_fdre_C_D)        0.029    10.411    lm32_cpu/multiplier/$auto$simplemap.cc:442:simplemap_dffe$9050
   -------------------------------------------------------------------
-                         required time                         10.627    
-                         arrival time                         -11.464    
+                         required time                         10.411    
+                         arrival time                         -10.922    
   -------------------------------------------------------------------
-                         slack                                 -0.837    
+                         slack                                 -0.511    
 
 
 
@@ -415,45 +342,45 @@ Slack (VIOLATED) :        -0.837ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -0.172ns  (arrival time - required time)
-  Source:                 FDPE_1/C
-                            (rising edge-triggered cell FDPE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            OSERDESE2/RST
-                            (rising edge-triggered cell OSERDESE2 clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (MET) :             0.072ns  (arrival time - required time)
+  Source:                 $auto$simplemap.cc:442:simplemap_dffe$21221/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            storage_1.0.0.0/DP/I
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
   Path Group:             sys_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
-  Data Path Delay:        0.478ns  (logic 0.141ns (29.492%)  route 0.337ns (70.508%))
+  Data Path Delay:        0.308ns  (logic 0.141ns (45.854%)  route 0.167ns (54.146%))
   Logic Levels:           0  
   Clock Path Skew:        0.145ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    0.355ns
-    Source Clock Delay      (SCD):    0.210ns
+    Destination Clock Delay (DCD):    0.259ns
+    Source Clock Delay      (SCD):    0.114ns
     Clock Pessimism Removal (CPR):    -0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock sys_clk rise edge)    0.000     0.000 r  
                          BUFG                         0.000     0.000 r  BUFG/O
-                         net (fo=4180, unplaced)      0.210     0.210    sys_clk
-                         FDPE                                         r  FDPE_1/C
+                         net (fo=2342, unplaced)      0.114     0.114    sys_clk
+                         FDRE                                         r  $auto$simplemap.cc:442:simplemap_dffe$21221/C
   -------------------------------------------------------------------    -------------------
-                         FDPE (Prop_fdpe_C_Q)         0.141     0.351 r  FDPE_1/Q
-                         net (fo=1066, unplaced)      0.337     0.688    sys_rst
-    OLOGIC_X1Y8          OSERDESE2                                    r  OSERDESE2/RST
+                         FDRE (Prop_fdre_C_Q)         0.141     0.255 r  $auto$simplemap.cc:442:simplemap_dffe$21221/Q
+                         net (fo=2, unplaced)         0.167     0.422    storage_1.0.0.0/D
+                         RAMD64E                                      r  storage_1.0.0.0/DP/I
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk rise edge)    0.000     0.000 r  
                          BUFG                         0.000     0.000 r  BUFG/O
-                         net (fo=4180, unplaced)      0.355     0.355    sys_clk
-    OLOGIC_X1Y8          OSERDESE2                                    r  OSERDESE2/CLKDIV
-                         clock pessimism              0.000     0.355    
-    OLOGIC_X1Y8          OSERDESE2 (Hold_oserdese2_CLKDIV_RST)
-                                                      0.505     0.860    OSERDESE2
+                         net (fo=2342, unplaced)      0.259     0.259    storage_1.0.0.0/WCLK
+                         RAMD64E                                      r  storage_1.0.0.0/DP/CLK
+                         clock pessimism              0.000     0.259    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091     0.350    storage_1.0.0.0/DP
   -------------------------------------------------------------------
-                         required time                         -0.860    
-                         arrival time                           0.688    
+                         required time                         -0.350    
+                         arrival time                           0.422    
   -------------------------------------------------------------------
-                         slack                                 -0.172    
+                         slack                                  0.072    
 
 
 
@@ -468,8 +395,8 @@ Sources:            { BUFG/O }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
 Min Period        n/a     XADC/DCLK    n/a            4.000         10.000      6.000                XADC/DCLK
-Low Pulse Width   Fast    RAMD64E/CLK  n/a            1.250         5.000       3.750                lm32_cpu/registers.6.0.0/DP/CLK
-High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         5.000       3.750                lm32_cpu/registers.6.0.0/DP/CLK
+Low Pulse Width   Slow    RAMD64E/CLK  n/a            1.250         5.000       3.750                storage.0.0.0/DP/CLK
+High Pulse Width  Slow    RAMD64E/CLK  n/a            1.250         5.000       3.750                storage.0.0.0/DP/CLK
 
 
 

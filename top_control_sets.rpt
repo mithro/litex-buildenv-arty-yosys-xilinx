@@ -1,0 +1,164 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Oct  4 18:41:22 2018
+| Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
+| Command      : report_control_sets -verbose -file top_control_sets.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    94 |
+| Unused register locations in slices containing registers |   182 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |           12 |
+|      4 |            8 |
+|      6 |            1 |
+|      8 |            8 |
+|     10 |            2 |
+|     14 |            1 |
+|    16+ |           62 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1198 |          267 |
+| No           | No                    | Yes                    |               4 |            1 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            3024 |          748 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
+| Clock Signal |                  Enable Signal                  |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++--------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
+|  sys_clk     | lm32_cpu/load_store_unit/dcache/$abc$32635$n66  |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n145        |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n137        |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n8         |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n27        |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/$abc$33185$n8                          |                                   |                1 |              2 |
+|  sys_clk     | $abc$35958$n6                                   |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/load_store_unit/dcache/$abc$32635$n65  |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/instruction_unit/icache/$abc$32745$n87 |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/interrupt_unit/$abc$34436$n10          |                                   |                1 |              2 |
+|  sys_clk     | $abc$35958$n381                                 |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/interrupt_unit/$abc$34436$n93          |                                   |                1 |              2 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n148        |                                   |                1 |              4 |
+|  sys_clk     |                                                 | xilinxasyncresetsynchronizerimpl0 |                1 |              4 |
+|  sys_clk     | $abc$35958$n460                                 |                                   |                1 |              4 |
+|  sys_clk     | lm32_cpu/instruction_unit/icache/$abc$32745$n89 |                                   |                1 |              4 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n9         |                                   |                1 |              4 |
+|  sys_clk     | $abc$35958$n443                                 |                                   |                2 |              4 |
+|  sys_clk     | lm32_cpu/mc_arithmetic/$abc$34563$n17           |                                   |                1 |              4 |
+|  sys_clk     | lm32_cpu/load_store_unit/dcache/$abc$32635$n68  |                                   |                1 |              4 |
+|  sys_clk     | lm32_cpu/load_store_unit/dcache/$abc$32635$n93  |                                   |                2 |              6 |
+|  sys_clk     | $abc$35958$n359                                 |                                   |                1 |              8 |
+|  sys_clk     | $abc$35958$n135                                 |                                   |                2 |              8 |
+|  sys_clk     | $abc$35958$n145                                 |                                   |                1 |              8 |
+|  sys_clk     | $abc$35958$n165                                 |                                   |                1 |              8 |
+|  sys_clk     | $abc$35958$n370                                 |                                   |                1 |              8 |
+|  sys_clk     | lm32_cpu/instruction_unit/icache/$abc$32745$n99 |                                   |                2 |              8 |
+|  sys_clk     | $abc$35958$n407                                 |                                   |                2 |              8 |
+|  sys_clk     | $abc$35958$n169                                 |                                   |                1 |              8 |
+|  sys_clk     | $abc$35958$n156                                 |                                   |                2 |             10 |
+|  sys_clk     | $abc$35958$n451                                 |                                   |                2 |             10 |
+|  sys_clk     | $abc$35958$n384                                 |                                   |                2 |             14 |
+|  sys_clk     | $abc$35958$n355                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n457                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n423                                 |                                   |                5 |             16 |
+|  sys_clk     | $abc$35958$n357                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n421                                 |                                   |                6 |             16 |
+|  sys_clk     | $abc$35958$n158                                 |                                   |                3 |             16 |
+|  sys_clk     | $abc$35958$n353                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n417                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n447                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n47                                  |                                   |                4 |             16 |
+|  sys_clk     | $abc$35958$n4                                   |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n110                                 |                                   |                3 |             16 |
+|  sys_clk     | lm32_cpu/instruction_unit/icache/$abc$32745$n6  |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n195                                 |                                   |                3 |             16 |
+|  sys_clk     | lm32_cpu/load_store_unit/dcache/$abc$32635$n78  |                                   |                4 |             16 |
+|  sys_clk     | $abc$35958$n234                                 |                                   |                3 |             16 |
+|  sys_clk     | $abc$35958$n193                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n160                                 |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n167                                 |                                   |                3 |             16 |
+|  sys_clk     | $abc$35958$n126                                 |                                   |                3 |             16 |
+|  sys_clk     | $abc$35958$n2                                   |                                   |                2 |             16 |
+|  sys_clk     | $abc$35958$n419                                 |                                   |                3 |             16 |
+|  sys_clk     | $abc$35958$n393                                 |                                   |                3 |             24 |
+|  sys_clk     | $abc$35958$n395                                 |                                   |                6 |             24 |
+|  sys_clk     | $abc$35958$n392                                 |                                   |                4 |             24 |
+|  sys_clk     | $abc$35958$n27                                  |                                   |                9 |             24 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n5         |                                   |                7 |             30 |
+|  sys_clk     | uart_rx_fifo_wrport_we                          |                                   |                4 |             32 |
+|  sys_clk     | uart_tx_fifo_wrport_we                          |                                   |                4 |             32 |
+|              |                                                 |                                   |                4 |             32 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n149        |                                   |               10 |             38 |
+|  sys_clk     | $abc$35958$n411                                 |                                   |                8 |             40 |
+|  sys_clk     | $abc$35958$n405                                 |                                   |                7 |             40 |
+|  sys_clk     | $abc$35958$n399                                 |                                   |                9 |             40 |
+|  sys_clk     | $abc$35958$n63                                  |                                   |                8 |             40 |
+|  sys_clk     | lm32_cpu/$abc$33185$n4                          |                                   |               11 |             46 |
+|  sys_clk     | lm32_cpu/load_store_unit/dcache/$abc$32635$n76  |                                   |                8 |             56 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n31        |                                   |               27 |             60 |
+|  sys_clk     | lm32_cpu/instruction_unit/icache/$abc$32745$n90 |                                   |               13 |             60 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n23        |                                   |               14 |             60 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n33        |                                   |               10 |             60 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n29        |                                   |               15 |             60 |
+|  sys_clk     | lm32_cpu/$abc$33185$n169                        |                                   |               11 |             60 |
+|  sys_clk     | $abc$35958$n461                                 |                                   |               11 |             64 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n17        |                                   |               13 |             64 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n139        |                                   |               16 |             64 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n158        |                                   |               18 |             64 |
+|  sys_clk     | lm32_cpu/interrupt_unit/$abc$34436$n102         |                                   |               27 |             64 |
+|  sys_clk     | lm32_cpu/multiplier/$abc$34783$n2               |                                   |               20 |             64 |
+|  sys_clk     | lm32_cpu/mc_arithmetic/$abc$34563$n34           |                                   |               19 |             64 |
+|  sys_clk     | lm32_cpu/mc_arithmetic/$abc$34563$n35           |                                   |               14 |             64 |
+|  sys_clk     | $abc$35958$n383                                 |                                   |               17 |             64 |
+|  sys_clk     | lm32_cpu/shifter/$abc$35814$n2                  |                                   |               17 |             66 |
+|  sys_clk     | lm32_cpu/load_store_unit/$abc$32845$n131        |                                   |               19 |             82 |
+|  sys_clk     | $abc$35958$n385                                 |                                   |               26 |            114 |
+|  sys_clk     | lm32_cpu/instruction_unit/$abc$32247$n2         |                                   |               29 |            126 |
+|  sys_clk     | lm32_cpu/multiplier/$abc$34783$n4               |                                   |               42 |            128 |
+|  sys_clk     | lm32_cpu/mc_arithmetic/$abc$34563$n15           |                                   |               25 |            140 |
+|  sys_clk     | lm32_cpu/$abc$33185$n10                         |                                   |               45 |            164 |
+|  sys_clk     | lm32_cpu/reg_write_enable_q_w                   |                                   |               32 |            256 |
+|  sys_clk     | lm32_cpu/$abc$33185$n2                          |                                   |              109 |            334 |
+|  sys_clk     |                                                 |                                   |              267 |           1198 |
++--------------+-------------------------------------------------+-----------------------------------+------------------+----------------+
+
+

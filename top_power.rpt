@@ -1,0 +1,259 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date             : Thu Oct  4 18:42:15 2018
+| Host             : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
+| Command          : report_power -file top_power.rpt
+| Design           : top
+| Device           : xc7a35tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.243        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.170        |
+| Device Static (W)        | 0.073        |
+| Effective TJA (C/W)      | 4.8          |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.016 |        6 |       --- |             --- |
+| Slice Logic              |     0.005 |     8668 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     5030 |     20800 |           24.18 |
+|   CARRY4                 |    <0.001 |      160 |      8150 |            1.96 |
+|   Register               |    <0.001 |     2113 |     41600 |            5.08 |
+|   LUT as Distributed RAM |    <0.001 |      176 |      9600 |            1.83 |
+|   F7/F8 Muxes            |    <0.001 |      684 |     32600 |            2.10 |
+|   Others                 |     0.000 |      206 |       --- |             --- |
+| Signals                  |     0.007 |     5798 |       --- |             --- |
+| Block RAM                |     0.008 |       19 |        50 |           38.00 |
+| PLL                      |     0.132 |        1 |         5 |           20.00 |
+| I/O                      |    <0.001 |       16 |       210 |            7.62 |
+| XADC                     |     0.002 |        1 |       --- |             --- |
+| Static Power             |     0.073 |          |           |                 |
+| Total                    |     0.243 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.054 |       0.044 |      0.010 |
+| Vccaux    |       1.800 |     0.081 |       0.069 |      0.013 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.021 |       0.001 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------+---------+-----------------+
+| Clock   | Domain  | Constraint (ns) |
++---------+---------+-----------------+
+| clk100  | clk100  |            10.0 |
+| pll_fb  | pll_fb  |            10.0 |
+| pll_sys | pll_sys |            10.0 |
+| sys_clk | sys_clk |            10.0 |
++---------+---------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| top                                              |     0.170 |
+|   lm32_cpu                                       |     0.026 |
+|     adder                                        |    <0.001 |
+|       addsub                                     |    <0.001 |
+|     decoder                                      |    <0.001 |
+|     instruction_unit                             |     0.009 |
+|       icache                                     |     0.006 |
+|         memories[0].way_0_data_ram               |     0.003 |
+|         memories[0].way_0_tag_ram                |     0.002 |
+|     interrupt_unit                               |    <0.001 |
+|     load_store_unit                              |     0.008 |
+|       dcache                                     |     0.006 |
+|         memories[0].data_memories.way_0_data_ram |     0.003 |
+|         memories[0].way_0_tag_ram                |     0.002 |
+|     logic_op                                     |    <0.001 |
+|     mc_arithmetic                                |     0.002 |
+|     multiplier                                   |     0.001 |
+|     registers.0.0.0                              |    <0.001 |
+|     registers.0.0.1                              |    <0.001 |
+|     registers.1.0.0                              |    <0.001 |
+|     registers.1.0.1                              |    <0.001 |
+|     registers.10.0.0                             |    <0.001 |
+|     registers.10.0.1                             |    <0.001 |
+|     registers.11.0.0                             |    <0.001 |
+|     registers.11.0.1                             |    <0.001 |
+|     registers.12.0.0                             |    <0.001 |
+|     registers.12.0.1                             |    <0.001 |
+|     registers.13.0.0                             |    <0.001 |
+|     registers.13.0.1                             |    <0.001 |
+|     registers.14.0.0                             |    <0.001 |
+|     registers.14.0.1                             |    <0.001 |
+|     registers.15.0.0                             |    <0.001 |
+|     registers.15.0.1                             |    <0.001 |
+|     registers.16.0.0                             |    <0.001 |
+|     registers.16.0.1                             |    <0.001 |
+|     registers.17.0.0                             |    <0.001 |
+|     registers.17.0.1                             |    <0.001 |
+|     registers.18.0.0                             |    <0.001 |
+|     registers.18.0.1                             |    <0.001 |
+|     registers.19.0.0                             |    <0.001 |
+|     registers.19.0.1                             |    <0.001 |
+|     registers.2.0.0                              |    <0.001 |
+|     registers.2.0.1                              |    <0.001 |
+|     registers.20.0.0                             |    <0.001 |
+|     registers.20.0.1                             |    <0.001 |
+|     registers.21.0.0                             |    <0.001 |
+|     registers.21.0.1                             |    <0.001 |
+|     registers.22.0.0                             |    <0.001 |
+|     registers.22.0.1                             |    <0.001 |
+|     registers.23.0.0                             |    <0.001 |
+|     registers.23.0.1                             |    <0.001 |
+|     registers.24.0.0                             |    <0.001 |
+|     registers.24.0.1                             |    <0.001 |
+|     registers.25.0.0                             |    <0.001 |
+|     registers.25.0.1                             |    <0.001 |
+|     registers.26.0.0                             |    <0.001 |
+|     registers.26.0.1                             |    <0.001 |
+|     registers.27.0.0                             |    <0.001 |
+|     registers.27.0.1                             |    <0.001 |
+|     registers.28.0.0                             |    <0.001 |
+|     registers.28.0.1                             |    <0.001 |
+|     registers.29.0.0                             |    <0.001 |
+|     registers.29.0.1                             |    <0.001 |
+|     registers.3.0.0                              |    <0.001 |
+|     registers.3.0.1                              |    <0.001 |
+|     registers.30.0.0                             |    <0.001 |
+|     registers.30.0.1                             |    <0.001 |
+|     registers.31.0.0                             |    <0.001 |
+|     registers.31.0.1                             |    <0.001 |
+|     registers.4.0.0                              |    <0.001 |
+|     registers.4.0.1                              |    <0.001 |
+|     registers.5.0.0                              |    <0.001 |
+|     registers.5.0.1                              |    <0.001 |
+|     registers.6.0.0                              |    <0.001 |
+|     registers.6.0.1                              |    <0.001 |
+|     registers.7.0.0                              |    <0.001 |
+|     registers.7.0.1                              |    <0.001 |
+|     registers.8.0.0                              |    <0.001 |
+|     registers.8.0.1                              |    <0.001 |
+|     registers.9.0.0                              |    <0.001 |
+|     registers.9.0.1                              |    <0.001 |
+|     shifter                                      |    <0.001 |
+|   mem_2.0.0.0                                    |     0.000 |
+|   mem_2.1.0.0                                    |     0.000 |
+|   mem_2.2.0.0                                    |     0.000 |
+|   mem_2.3.0.0                                    |     0.000 |
+|   mem_2.4.0.0                                    |     0.000 |
+|   mem_2.5.0.0                                    |     0.000 |
+|   mem_2.6.0.0                                    |     0.000 |
+|   mem_2.7.0.0                                    |     0.000 |
+|   storage.0.0.0                                  |    <0.001 |
+|   storage.1.0.0                                  |    <0.001 |
+|   storage.2.0.0                                  |    <0.001 |
+|   storage.3.0.0                                  |    <0.001 |
+|   storage.4.0.0                                  |    <0.001 |
+|   storage.5.0.0                                  |    <0.001 |
+|   storage.6.0.0                                  |    <0.001 |
+|   storage.7.0.0                                  |    <0.001 |
+|   storage_1.0.0.0                                |    <0.001 |
+|   storage_1.1.0.0                                |    <0.001 |
+|   storage_1.2.0.0                                |    <0.001 |
+|   storage_1.3.0.0                                |    <0.001 |
+|   storage_1.4.0.0                                |    <0.001 |
+|   storage_1.5.0.0                                |    <0.001 |
+|   storage_1.6.0.0                                |    <0.001 |
+|   storage_1.7.0.0                                |    <0.001 |
++--------------------------------------------------+-----------+
+
+

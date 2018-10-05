@@ -1,0 +1,52 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Thu Oct  4 18:41:22 2018
+| Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
+| Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
+| Design       : top
+| Device       : 7a35tcsg324-1
+| Design State : Fully Placed
+------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+|                     Instance                     |                                  Module                                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++--------------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+| top                                              |                                                                   (top) |       5206 |       5030 |     176 |    0 | 2113 |     18 |      2 |            0 |
+|   (top)                                          |                                                                   (top) |       1274 |       1226 |      48 |    0 |  731 |     16 |      0 |            0 |
+|   lm32_cpu                                       |                                           $paramod\lm32_cpu\eba_reset=0 |       3935 |       3807 |     128 |    0 | 1382 |      2 |      2 |            0 |
+|     (lm32_cpu)                                   |                                           $paramod\lm32_cpu\eba_reset=0 |       1098 |        970 |     128 |    0 |  381 |      0 |      0 |            0 |
+|     adder                                        |                                                              lm32_adder |        100 |        100 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       (adder)                                    |                                                              lm32_adder |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       addsub                                     |                                                             lm32_addsub |         99 |         99 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     decoder                                      |                                                            lm32_decoder |         75 |         75 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     instruction_unit                             | $paramod$8a1e6bce2f424a181d9e9e47548b3209ceb88e2d\lm32_instruction_unit |        546 |        546 |       0 |    0 |  385 |      1 |      1 |            0 |
+|       (instruction_unit)                         | $paramod$8a1e6bce2f424a181d9e9e47548b3209ceb88e2d\lm32_instruction_unit |        350 |        350 |       0 |    0 |  266 |      0 |      0 |            0 |
+|       icache                                     |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_icache |        196 |        196 |       0 |    0 |  119 |      1 |      1 |            0 |
+|         (icache)                                 |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_icache |         98 |         98 |       0 |    0 |   46 |      0 |      0 |            0 |
+|         memories[0].way_0_data_ram               |                        $paramod\lm32_ram\data_width=32\address_width=10 |         58 |         58 |       0 |    0 |   43 |      1 |      0 |            0 |
+|         memories[0].way_0_tag_ram                |                         $paramod\lm32_ram\data_width=21\address_width=8 |         43 |         43 |       0 |    0 |   30 |      0 |      1 |            0 |
+|     interrupt_unit                               |                                                          lm32_interrupt |         74 |         74 |       0 |    0 |   34 |      0 |      0 |            0 |
+|     load_store_unit                              |  $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_load_store_unit |        500 |        500 |       0 |    0 |  284 |      1 |      1 |            0 |
+|       (load_store_unit)                          |  $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_load_store_unit |        283 |        283 |       0 |    0 |  167 |      0 |      0 |            0 |
+|       dcache                                     |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_dcache |        217 |        217 |       0 |    0 |  117 |      1 |      1 |            0 |
+|         (dcache)                                 |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_dcache |        116 |        116 |       0 |    0 |   44 |      0 |      0 |            0 |
+|         memories[0].data_memories.way_0_data_ram |                    $paramod\lm32_ram\data_width=32\address_width=10_HD1 |         59 |         59 |       0 |    0 |   43 |      1 |      0 |            0 |
+|         memories[0].way_0_tag_ram                |                     $paramod\lm32_ram\data_width=21\address_width=8_HD2 |         43 |         43 |       0 |    0 |   30 |      0 |      1 |            0 |
+|     logic_op                                     |                                                           lm32_logic_op |         32 |         32 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     mc_arithmetic                                |                                                      lm32_mc_arithmetic |        185 |        185 |       0 |    0 |  137 |      0 |      0 |            0 |
+|     multiplier                                   |                                                         lm32_multiplier |       1176 |       1176 |       0 |    0 |  128 |      0 |      0 |            0 |
+|     shifter                                      |                                                            lm32_shifter |        162 |        162 |       0 |    0 |   33 |      0 |      0 |            0 |
++--------------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

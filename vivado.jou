@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct  4 18:31:25 2018
-# Process ID: 145556
-# Current directory: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware
+# Start of session at: Thu Oct  4 18:40:07 2018
+# Process ID: 148737
+# Current directory: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_min_lm32/gateware
 # Command line: vivado -mode batch -source top.tcl
-# Log file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/vivado.log
-# Journal file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/vivado.jou
+# Log file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_min_lm32/gateware/vivado.log
+# Journal file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_min_lm32/gateware/vivado.jou
 #-----------------------------------------------------------
 source top.tcl
