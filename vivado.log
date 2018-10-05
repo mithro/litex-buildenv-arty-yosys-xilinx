@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2017.3 (64-bit)
-# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
-# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
-# Start of session at: Thu Oct  4 16:52:08 2018
-# Process ID: 90460
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct  4 18:31:25 2018
+# Process ID: 145556
 # Current directory: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware
 # Command line: vivado -mode batch -source top.tcl
 # Log file: /usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/vivado.log
@@ -124,6 +124,8 @@ INFO: [Netlist 29-17] Analyzing 2669 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 12 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 36 OBUFs to IO ports without IO buffers.
 Parsing XDC File [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc]
 WARNING: [Vivado 12-1023] No nets matched for command 'get_nets -filter {mr_ff == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:282]
 WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:284]
@@ -133,8 +135,6 @@ WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == Q} -
 WARNING: [Vivado 12-180] No cells matched 'get_cells -filter {ars_ff2 == TRUE}'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:286]
 WARNING: [Vivado 12-508] No pins matched 'get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]'. [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc:286]
 Finished Parsing XDC File [/usr/local/google/home/tansell/github/timvideos/HDMI2USB-litex-firmware/build/arty_base_lm32/gateware/top.xdc]
-INFO: [Opt 31-140] Inserted 12 IBUFs to IO ports without IO buffers.
-INFO: [Opt 31-141] Inserted 36 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 34 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 524 instances were transformed.
@@ -147,17 +147,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 9 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1439.754 ; gain = 278.262 ; free physical = 1156 ; free virtual = 32829
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1441.547 ; gain = 257.102 ; free physical = 6830 ; free virtual = 37813
 # report_timing_summary -file top_timing_synth.rpt
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-2] Deriving generated clocks
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-report_timing_summary: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 2003.242 ; gain = 563.488 ; free physical = 726 ; free virtual = 32406
+report_timing_summary: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 2005.105 ; gain = 563.559 ; free physical = 6382 ; free virtual = 37372
 # report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2003.242 ; gain = 0.000 ; free physical = 727 ; free virtual = 32407
+report_utilization: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2005.105 ; gain = 0.000 ; free physical = 6383 ; free virtual = 37373
 # report_utilization -file top_utilization_synth.rpt
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2004.242 ; gain = 1.000 ; free physical = 727 ; free virtual = 32407
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2006.105 ; gain = 1.000 ; free physical = 6382 ; free virtual = 37372
 # opt_design
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -169,49 +169,60 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2077.273 ; gain = 73.031 ; free physical = 735 ; free virtual = 32416
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2089.137 ; gain = 83.031 ; free physical = 6378 ; free virtual = 37369
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: 1469d89df
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6378 ; free virtual = 37369
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 25 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: c7989f1d
+Phase 1 Retarget | Checksum: 13cd7ecd0
 
-Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.66 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 751 ; free virtual = 32433
-INFO: [Opt 31-389] Phase Retarget created 317 cells and removed 380 cells
+Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.73 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6393 ; free virtual = 37384
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 76 load pin(s).
-Phase 2 Constant propagation | Checksum: 187ab92f8
+Phase 2 Constant propagation | Checksum: 1fceae0ab
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 764 ; free virtual = 32445
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.97 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6394 ; free virtual = 37385
 INFO: [Opt 31-389] Phase Constant propagation created 36 cells and removed 332 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1581f9e24
+Phase 3 Sweep | Checksum: 1cd5eebd7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 764 ; free virtual = 32445
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6391 ; free virtual = 37384
 INFO: [Opt 31-389] Phase Sweep created 4 cells and removed 39 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1581f9e24
+Phase 4 BUFG optimization | Checksum: 1cd5eebd7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 760 ; free virtual = 32441
-INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6390 ; free virtual = 37383
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 1581f9e24
+Phase 5 Shift Register Optimization | Checksum: 1250d8d2d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 760 ; free virtual = 32441
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6389 ; free virtual = 37383
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1250d8d2d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6391 ; free virtual = 37384
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 758 ; free virtual = 32439
-Ending Logic Optimization Task | Checksum: 1581f9e24
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6391 ; free virtual = 37384
+Ending Logic Optimization Task | Checksum: 1250d8d2d
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2077.273 ; gain = 0.000 ; free physical = 757 ; free virtual = 32439
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2089.137 ; gain = 0.000 ; free physical = 6391 ; free virtual = 37385
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -229,16 +240,21 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 37 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 34 WE to EN ports
 Number of BRAM Ports augmented: 0 newly gated: 67 Total Ports: 74
-Ending PowerOpt Patch Enables Task | Checksum: 10ab8f488
+Ending PowerOpt Patch Enables Task | Checksum: e82406a1
 
-Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2493.836 ; gain = 0.000 ; free physical = 689 ; free virtual = 32403
-Ending Power Optimization Task | Checksum: 10ab8f488
+Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2496.020 ; gain = 0.000 ; free physical = 6351 ; free virtual = 37344
+Ending Power Optimization Task | Checksum: e82406a1
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2493.836 ; gain = 416.562 ; free physical = 701 ; free virtual = 32415
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 2496.020 ; gain = 406.883 ; free physical = 6363 ; free virtual = 37355
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: e82406a1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2496.020 ; gain = 0.000 ; free physical = 6363 ; free virtual = 37355
 INFO: [Common 17-83] Releasing license: Implementation
-21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2493.836 ; gain = 489.594 ; free physical = 701 ; free virtual = 32415
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2496.020 ; gain = 489.914 ; free physical = 6363 ; free virtual = 37355
 # place_design
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
@@ -260,4 +276,4 @@ ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
     while executing
 "place_design"
     (file "top.tcl" line 9)
-INFO: [Common 17-206] Exiting Vivado at Thu Oct  4 16:53:09 2018...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  4 18:32:26 2018...
