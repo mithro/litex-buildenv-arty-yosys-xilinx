@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Oct  4 21:08:34 2018
+| Date         : Thu Oct  4 22:00:04 2018
 | Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
 | Command      : report_utilization -hierarchical -file top_utilization_hierarchical_place.rpt
 | Design       : top
@@ -18,30 +18,35 @@ Table of Contents
 1. Utilization by Hierarchy
 ---------------------------
 
-+--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-|                     Instance                     |           Module           | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
-+--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
-| top                                              |                      (top) |       3717 |       3523 |     192 |    2 | 3060 |     18 |     19 |            3 |
-|   (top)                                          |                      (top) |       1937 |       1791 |     144 |    2 | 1920 |     16 |     17 |            0 |
-|   lm32_cpu                                       |                   lm32_cpu |       1780 |       1732 |      48 |    0 | 1140 |      2 |      2 |            3 |
-|     (lm32_cpu)                                   |                   lm32_cpu |        113 |         65 |      48 |    0 |  340 |      0 |      0 |            0 |
-|     instruction_unit                             |      lm32_instruction_unit |        595 |        595 |       0 |    0 |  323 |      1 |      1 |            0 |
-|       (instruction_unit)                         |      lm32_instruction_unit |        431 |        431 |       0 |    0 |  277 |      0 |      0 |            0 |
-|       icache                                     |                lm32_icache |        164 |        164 |       0 |    0 |   46 |      1 |      1 |            0 |
-|         (icache)                                 |                lm32_icache |         87 |         87 |       0 |    0 |   46 |      0 |      0 |            0 |
-|         memories[0].way_0_data_ram               |                 lm32_ram_0 |         22 |         22 |       0 |    0 |    0 |      1 |      0 |            0 |
-|         memories[0].way_0_tag_ram                | lm32_ram__parameterized0_1 |         55 |         55 |       0 |    0 |    0 |      0 |      1 |            0 |
-|     interrupt_unit                               |             lm32_interrupt |         40 |         40 |       0 |    0 |   34 |      0 |      0 |            0 |
-|     load_store_unit                              |       lm32_load_store_unit |        620 |        620 |       0 |    0 |  224 |      1 |      1 |            0 |
-|       (load_store_unit)                          |       lm32_load_store_unit |        414 |        414 |       0 |    0 |  180 |      0 |      0 |            0 |
-|       dcache                                     |                lm32_dcache |        206 |        206 |       0 |    0 |   44 |      1 |      1 |            0 |
-|         (dcache)                                 |                lm32_dcache |         98 |         98 |       0 |    0 |   44 |      0 |      0 |            0 |
-|         memories[0].data_memories.way_0_data_ram |                   lm32_ram |         90 |         90 |       0 |    0 |    0 |      1 |      0 |            0 |
-|         memories[0].way_0_tag_ram                |   lm32_ram__parameterized0 |         18 |         18 |       0 |    0 |    0 |      0 |      1 |            0 |
-|     mc_arithmetic                                |         lm32_mc_arithmetic |        184 |        184 |       0 |    0 |  137 |      0 |      0 |            0 |
-|     multiplier                                   |            lm32_multiplier |         94 |         94 |       0 |    0 |   49 |      0 |      0 |            3 |
-|     shifter                                      |               lm32_shifter |        135 |        135 |       0 |    0 |   33 |      0 |      0 |            0 |
-+--------------------------------------------------+----------------------------+------------+------------+---------+------+------+--------+--------+--------------+
++--------------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+|                     Instance                     |                                  Module                                 | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++--------------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
+| top                                              |                                                                   (top) |       8396 |       7868 |     528 |    0 | 3522 |     18 |     19 |            0 |
+|   (top)                                          |                                                                   (top) |       4332 |       3932 |     400 |    0 | 2114 |     16 |     17 |            0 |
+|   lm32_cpu                                       |                                           $paramod\lm32_cpu\eba_reset=0 |       4065 |       3937 |     128 |    0 | 1408 |      2 |      2 |            0 |
+|     (lm32_cpu)                                   |                                           $paramod\lm32_cpu\eba_reset=0 |       1103 |        975 |     128 |    0 |  381 |      0 |      0 |            0 |
+|     adder                                        |                                                              lm32_adder |         99 |         99 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       (adder)                                    |                                                              lm32_adder |          1 |          1 |       0 |    0 |    0 |      0 |      0 |            0 |
+|       addsub                                     |                                                             lm32_addsub |         98 |         98 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     decoder                                      |                                                            lm32_decoder |         75 |         75 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     instruction_unit                             | $paramod$8a1e6bce2f424a181d9e9e47548b3209ceb88e2d\lm32_instruction_unit |        553 |        553 |       0 |    0 |  398 |      1 |      1 |            0 |
+|       (instruction_unit)                         | $paramod$8a1e6bce2f424a181d9e9e47548b3209ceb88e2d\lm32_instruction_unit |        363 |        363 |       0 |    0 |  279 |      0 |      0 |            0 |
+|       icache                                     |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_icache |        192 |        192 |       0 |    0 |  119 |      1 |      1 |            0 |
+|         (icache)                                 |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_icache |         95 |         95 |       0 |    0 |   46 |      0 |      0 |            0 |
+|         memories[0].way_0_data_ram               |                    $paramod\lm32_ram\data_width=32\address_width=10_HD1 |         55 |         55 |       0 |    0 |   43 |      1 |      0 |            0 |
+|         memories[0].way_0_tag_ram                |                     $paramod\lm32_ram\data_width=21\address_width=8_HD2 |         42 |         42 |       0 |    0 |   30 |      0 |      1 |            0 |
+|     interrupt_unit                               |                                                          lm32_interrupt |         74 |         74 |       0 |    0 |   34 |      0 |      0 |            0 |
+|     load_store_unit                              |  $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_load_store_unit |        506 |        506 |       0 |    0 |  297 |      1 |      1 |            0 |
+|       (load_store_unit)                          |  $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_load_store_unit |        299 |        299 |       0 |    0 |  180 |      0 |      0 |            0 |
+|       dcache                                     |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_dcache |        207 |        207 |       0 |    0 |  117 |      1 |      1 |            0 |
+|         (dcache)                                 |           $paramod$c9882f302d047995339826006ab6f263af634e6e\lm32_dcache |        108 |        108 |       0 |    0 |   44 |      0 |      0 |            0 |
+|         memories[0].data_memories.way_0_data_ram |                        $paramod\lm32_ram\data_width=32\address_width=10 |         56 |         56 |       0 |    0 |   43 |      1 |      0 |            0 |
+|         memories[0].way_0_tag_ram                |                         $paramod\lm32_ram\data_width=21\address_width=8 |         43 |         43 |       0 |    0 |   30 |      0 |      1 |            0 |
+|     logic_op                                     |                                                           lm32_logic_op |         32 |         32 |       0 |    0 |    0 |      0 |      0 |            0 |
+|     mc_arithmetic                                |                                                      lm32_mc_arithmetic |        186 |        186 |       0 |    0 |  137 |      0 |      0 |            0 |
+|     multiplier                                   |                                                         lm32_multiplier |       1283 |       1283 |       0 |    0 |  128 |      0 |      0 |            0 |
+|     shifter                                      |                                                            lm32_shifter |        163 |        163 |       0 |    0 |   33 |      0 |      0 |            0 |
++--------------------------------------------------+-------------------------------------------------------------------------+------------+------------+---------+------+------+--------+--------+--------------+
 * Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
 
 
