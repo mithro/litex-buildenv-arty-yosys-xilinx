@@ -19,4 +19,6 @@ read_verilog -I./verilog/config ./verilog/submodule/rtl/lm32_dtlb.v
 read_verilog -I./verilog/config top.v
 # hierarchy -top top
 # proc; memory; opt; fsm; opt
+attrmap -tocase keep -imap keep="true" keep=1 \
+    -imap keep="false" keep=0 -remove keep=0
 synth_xilinx -top top -edif top.edif

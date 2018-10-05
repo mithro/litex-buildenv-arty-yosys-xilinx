@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
-| Date         : Thu Oct  4 18:32:17 2018
+| Date         : Thu Oct  4 21:08:09 2018
 | Host         : tansell.pao.corp.google.com running 64-bit Debian GNU/Linux rodete (upgraded from: Ubuntu 14.04.5 LTS)
 | Command      : report_utilization -file top_utilization_synth.rpt
 | Design       : top
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 8966 |     0 |     20800 | 43.11 |
-|   LUT as Logic             | 8438 |     0 |     20800 | 40.57 |
-|   LUT as Memory            |  528 |     0 |      9600 |  5.50 |
-|     LUT as Distributed RAM |  528 |     0 |           |       |
-|     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 3524 |     0 |     41600 |  8.47 |
-|   Register as Flip Flop    | 3524 |     0 |     41600 |  8.47 |
+| Slice LUTs*                | 3733 |     0 |     20800 | 17.95 |
+|   LUT as Logic             | 3539 |     0 |     20800 | 17.01 |
+|   LUT as Memory            |  194 |     0 |      9600 |  2.02 |
+|     LUT as Distributed RAM |  192 |     0 |           |       |
+|     LUT as Shift Register  |    2 |     0 |           |       |
+| Slice Registers            | 3060 |     0 |     41600 |  7.36 |
+|   Register as Flip Flop    | 3060 |     0 |     41600 |  7.36 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                   |  574 |     0 |     16300 |  3.52 |
-| F8 Muxes                   |  159 |     0 |      8150 |  1.95 |
+| F7 Muxes                   |  104 |     0 |     16300 |  0.64 |
+| F8 Muxes                   |    5 |     0 |      8150 |  0.06 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 2     |          Yes |           - |          Set |
+| 4     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 0     |          Yes |         Set |            - |
-| 3522  |          Yes |       Reset |            - |
+| 130   |          Yes |         Set |            - |
+| 2926  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -81,11 +81,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |        90 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    3 |     0 |        90 |  3.33 |
+|   DSP48E1 only |    3 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -102,7 +103,7 @@ Table of Contents
 | PHASER_REF                  |    0 |     0 |         5 |  0.00 |
 | OUT_FIFO                    |    0 |     0 |        20 |  0.00 |
 | IN_FIFO                     |    0 |     0 |        20 |  0.00 |
-| IDELAYCTRL                  |    0 |     0 |         5 |  0.00 |
+| IDELAYCTRL                  |    1 |     0 |         5 | 20.00 |
 | IBUFDS                      |    0 |     0 |       202 |  0.00 |
 | PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        20 |  0.00 |
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        20 |  0.00 |
@@ -121,7 +122,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    4 |     0 |        32 | 12.50 |
+| BUFGCTRL   |    7 |     0 |        32 | 21.88 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         5 |  0.00 |
 | PLLE2_ADV  |    1 |     0 |         5 | 20.00 |
@@ -144,7 +145,7 @@ Table of Contents
 | FRAME_ECCE2 |    0 |     0 |         1 |   0.00 |
 | ICAPE2      |    0 |     0 |         2 |   0.00 |
 | PCIE_2_1    |    0 |     0 |         1 |   0.00 |
-| STARTUPE2   |    0 |     0 |         1 |   0.00 |
+| STARTUPE2   |    1 |     0 |         1 | 100.00 |
 | XADC        |    1 |     0 |         1 | 100.00 |
 +-------------+------+-------+-----------+--------+
 
@@ -152,38 +153,44 @@ Table of Contents
 7. Primitives
 -------------
 
-+-----------+------+---------------------+
-|  Ref Name | Used | Functional Category |
-+-----------+------+---------------------+
-| FDRE      | 3522 |        Flop & Latch |
-| LUT2      | 2962 |                 LUT |
-| LUT6      | 2853 |                 LUT |
-| LUT3      | 1060 |                 LUT |
-| LUT4      |  909 |                 LUT |
-| MUXF7     |  574 |               MuxFx |
-| LUT5      |  542 |                 LUT |
-| RAMD64E   |  528 |  Distributed Memory |
-| LUT1      |  318 |                 LUT |
-| CARRY4    |  240 |          CarryLogic |
-| MUXF8     |  159 |               MuxFx |
-| OSERDESE2 |   45 |                  IO |
-| OBUF      |   36 |                  IO |
-| IBUF      |   28 |                  IO |
-| RAMB18E1  |   19 |        Block Memory |
-| RAMB36E1  |   18 |        Block Memory |
-| OBUFT     |   16 |                  IO |
-| ISERDESE2 |   16 |                  IO |
-| IDELAYE2  |   16 |                  IO |
-| OBUFTDS   |    4 |                  IO |
-| BUFG      |    4 |               Clock |
-| INV       |    3 |                 LUT |
-| OBUFDS    |    2 |                  IO |
-| FDPE      |    2 |        Flop & Latch |
-| XADC      |    1 |              Others |
-| PLLE2_ADV |    1 |               Clock |
-| DNA_PORT  |    1 |              Others |
-| BUFR      |    1 |               Clock |
-+-----------+------+---------------------+
++------------+------+---------------------+
+|  Ref Name  | Used | Functional Category |
++------------+------+---------------------+
+| FDRE       | 2926 |        Flop & Latch |
+| LUT6       | 1462 |                 LUT |
+| LUT5       |  807 |                 LUT |
+| LUT4       |  562 |                 LUT |
+| LUT3       |  523 |                 LUT |
+| LUT2       |  453 |                 LUT |
+| RAMD32     |  288 |  Distributed Memory |
+| CARRY4     |  181 |          CarryLogic |
+| LUT1       |  175 |                 LUT |
+| FDSE       |  130 |        Flop & Latch |
+| MUXF7      |  104 |               MuxFx |
+| RAMS32     |   96 |  Distributed Memory |
+| OSERDESE2  |   45 |                  IO |
+| OBUF       |   36 |                  IO |
+| IBUF       |   28 |                  IO |
+| RAMB18E1   |   19 |        Block Memory |
+| RAMB36E1   |   18 |        Block Memory |
+| OBUFT      |   16 |                  IO |
+| ISERDESE2  |   16 |                  IO |
+| IDELAYE2   |   16 |                  IO |
+| BUFG       |    7 |               Clock |
+| MUXF8      |    5 |               MuxFx |
+| OBUFTDS    |    4 |                  IO |
+| FDPE       |    4 |        Flop & Latch |
+| INV        |    3 |                 LUT |
+| DSP48E1    |    3 |    Block Arithmetic |
+| SRL16E     |    2 |  Distributed Memory |
+| OBUFDS     |    2 |                  IO |
+| XADC       |    1 |              Others |
+| STARTUPE2  |    1 |              Others |
+| PLLE2_ADV  |    1 |               Clock |
+| IDELAYCTRL |    1 |                  IO |
+| DNA_PORT   |    1 |              Others |
+| BUFR       |    1 |               Clock |
++------------+------+---------------------+
 
 
 8. Black Boxes

@@ -9932,36 +9932,43 @@ PLLE2_BASE #(
 	.LOCKED(pll_locked)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG(
 	.I(pll_sys),
 	.O(sys_clk)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG_1(
 	.I(pll_sys4x),
 	.O(sys4x_clk)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG_2(
 	.I(pll_sys4x_dqs),
 	.O(sys4x_dqs_clk)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG_3(
 	.I(pll_clk200),
 	.O(clk200_clk)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG_4(
 	.I(pll_clk100),
 	.O(clk100_clk)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG_5(
 	.I(pll_clk50),
 	.O(clk50_clk)
 );
 
+(* KEEP = "TRUE" *)
 IDELAYCTRL IDELAYCTRL(
 	.REFCLK(clk200_clk),
 	.RST(ic_reset)
@@ -9976,6 +9983,7 @@ BUFR #(
 	.O(eth_clk)
 );
 
+(* KEEP = "TRUE" *)
 BUFG BUFG_6(
 	.I(eth_clk),
 	.O(eth_ref_clk)
@@ -10034,6 +10042,7 @@ XADC #(
 	.OT(ot)
 );
 
+(* KEEP = "TRUE" *)
 STARTUPE2 STARTUPE2(
 	.CLK(1'd0),
 	.GSR(1'd0),

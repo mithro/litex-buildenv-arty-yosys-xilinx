@@ -284,3 +284,6 @@ set_false_path -quiet -to [get_nets -filter {mr_ff == TRUE}]
 set_false_path -quiet -to [get_pins -filter {REF_PIN_NAME == PRE} -of [get_cells -filter {ars_ff1 == TRUE || ars_ff2 == TRUE}]]
 
 set_max_delay 2 -quiet -from [get_pins -filter {REF_PIN_NAME == Q} -of [get_cells -filter {ars_ff1 == TRUE}]] -to [get_pins -filter {REF_PIN_NAME == D} -of [get_cells -filter {ars_ff2 == TRUE}]]
+
+set_property IODELAY_GROUP IO_DLY1 [get_cells delayctrl]
+set_property IODELAY_GROUP IO_DLY1 [get_cells -hier *IDELAYE2*]
